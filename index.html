@@ -10,10 +10,12 @@
   <main>
     <section id="weather-wrapper">
       <h1>Quel temps fait-il ?</h1>
-      <div id="weather-search">
-        <input id="search" type="text" placeholder="Ville" />
-        <input id="submit" type="submit" onclick="fetchWeather()" value="Entrer" />
-      </div>
+      <form id="search-form">
+        <div id="weather-search">
+          <input id="search" name="search" type="text" placeholder="Ville" autocomplete="off" />
+          <button id="submit" type="submit">Entrer</button>
+        </div>
+      </form>
       <div id="weather-data" style="display: none;"></div>
     </section>
   </main>
