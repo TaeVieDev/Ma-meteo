@@ -1,4 +1,5 @@
 // Configuration de l'API
+// La clé API sera injectée automatiquement lors du déploiement via GitHub Actions
 const API_KEY = "YOUR_API_KEY_PLACEHOLDER";
 
 // Fonction principale pour récupérer les données météo
