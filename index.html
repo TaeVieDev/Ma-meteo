@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="styles.css" rel="stylesheet" />
+  <title>Ma météo</title>
+</head>
+<body>
+  <main>
+    <section id="weather-wrapper">
+      <h1>Quel temps fait-il ?</h1>
+      <form id="search-form">
+        <div id="weather-search">
+          <input id="search" name="search" type="text" placeholder="Ville" autocomplete="off" />
+          <button id="submit" type="submit">Entrer</button>
+        </div>
+      </form>
+      <div id="weather-data" style="display: none;"></div>
+    </section>
+  </main>
+
+  <video class="bg-video" autoplay muted loop playsinline aria-hidden="true" preload="auto">
+    <source src="assets/cartoon-cloud.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
+  <script src="script.js"></script>
+</body>
+</html>

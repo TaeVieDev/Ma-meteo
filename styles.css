@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Montserrat', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  top: 20%;
+  min-width: 540px;
+  max-width: 50%;
+  margin: auto;
+  padding: 2em;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(2px);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#search {
+  border-radius: 8px;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  height: 42px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+#search:focus {
+  outline: none;
+}
+
+#search:hover {
+  transform: scale(1.05);
+}
+
+#submit {
+  padding: 6px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: none;
+  background-color: #83c9ff;
+  color: white;
+  transition: 0.3s ease;
+}
+
+#submit:hover {
+  background-color: #92d0ff;
+  transform: scale(1.05);
+}
+
+#weather-wrapper {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: space-between;
+}
+
+#weather-search {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#weather-data {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 2em;
+  margin-top: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: none;
+  align-items: center;
+  gap: 20px;
+  max-width: 100%;
+}
+
+/* Section icône météo */
+.weather-icon {
+  flex-shrink: 0;
+}
+
+.weather-icon img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #74b9ff, #0984e3);
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(116, 185, 255, 0.3);
+}
+
+/* Section informations météo */
+.weather-info {
+  flex: 1;
+  text-align: left;
+}
+
+.city-name {
+  font-size: 2.2em;
+  color: #2d3436;
+  margin-bottom: 0.3em;
+  font-weight: 700;
+}
+
+.temperature {
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #0984e3;
+  margin-bottom: 0.2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  font-size: 1.3em;
+  color: #636e72;
+  margin-bottom: 1em;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.additional-info {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feels-like,
+.humidity {
+  background-color: rgba(116, 185, 255, 0.1);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  color: #2d3436;
+  border: 1px solid rgba(116, 185, 255, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #weather-data {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .weather-info {
+    text-align: center;
+  }
+  
+  .city-name {
+    font-size: 1.8em;
+  }
+  
+  .temperature {
+    font-size: 2.8em;
+  }
+  
+  .additional-info {
+    justify-content: center;
+  }
+}
+
+.bg-video {
+  position: fixed; inset:0; width:100%; height:100%; object-fit:cover; z-index:-1;
+}
